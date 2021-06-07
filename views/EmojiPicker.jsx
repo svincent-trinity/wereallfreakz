@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { StyleSheet, Image, Text, SafeAreaView, Button, View } from "react-native";
+import { ImageBackground, StyleSheet, Image, Text, SafeAreaView, Button, View } from "react-native";
 import EmojiSelector from "react-native-emoji-selector";
+import BackgroundImg from "./beginBackground.png";
 
 
 export const EmojiPickerView = ({ navigation }) => {
@@ -25,14 +26,9 @@ export const EmojiPickerView = ({ navigation }) => {
 
 
   return (
-  <SafeAreaView style={
-    {flexDirection: "column"},
-    {alignItems: "center"},
-    {width: "100%"},
-    {height: "100%"},
-    { 
-      background: require('../assets/beginBackground.png')
-    }}>
+  <SafeAreaView style={styles.container}>
+    <ImageBackground source={BackgroundImg} style={styles.image}>
+
 
     <View style={styles.topContainer}>
 
@@ -51,7 +47,7 @@ export const EmojiPickerView = ({ navigation }) => {
 
 
       </View>
-
+     </ImageBackground>
     </SafeAreaView>
   );
 };
@@ -60,6 +56,12 @@ const styles = StyleSheet.create({
     
     flexDirection: "column",
     alignItems: "center",
+    width: "100%",
+    height: "100%"
+  },
+  image: {
+    flex: 1,
+    resizeMode: 'cover',
     width: "100%",
     height: "100%"
   },

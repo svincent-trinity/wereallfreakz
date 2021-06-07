@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {Image} from "react-native";
+import {ImageBackground, Image} from "react-native";
 import BackgroundImg from "./beginBackground.png";
 
 import Button1 from "../assets/buttons/button1.png";
@@ -169,14 +169,9 @@ export const ChatView = ({ route }) => {
 
   return (
 
-    <SafeAreaView       style={
-    {flexDirection: "column"},
-    {position: "fixed"},
-    {alignItems: "center"},
-    {width: "100%"},
-    {height: "100%"}
-    }
+    <SafeAreaView       style={styles.container}
     >
+    <ImageBackground source={BackgroundImg} style={styles.image}>
 
     <View style={styles.bottomContainer}>
           <TextInput
@@ -234,6 +229,8 @@ export const ChatView = ({ route }) => {
           </View>
 
       </View>
+          </ImageBackground>
+
     </SafeAreaView>
   );
 };
@@ -259,6 +256,24 @@ const styles = StyleSheet.create({
   button2Style: {
     width: "100%",
     paddingHorizontal: 16
+  },
+    container: {
+    
+    flexDirection: "column",
+    alignItems: "center",
+    width: "100%",
+    height: "100%"
+  },
+  image: {
+    flex: 1,
+    resizeMode: 'cover',
+        width: "100%",
+    height: "100%"
+  },
+  text: {
+    color: 'grey',
+    fontSize: 30,
+    fontWeight: 'bold',
   },
   button3Style: {
     width: "100%",
