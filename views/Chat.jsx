@@ -198,7 +198,7 @@ export const ChatView = ({ route }) => {
             message.content.includes("a:,") && <Button
               title= {message.content.substring(3)}
               onPress={handleSubmitButton1}
-              disabled = {disableStuff}
+              /*<!--disabled = {disableStuff}->>*/
             />
           ))}
           </View>
@@ -207,7 +207,7 @@ export const ChatView = ({ route }) => {
             message.content.includes("b:,") && <Button
               title= {message.content.substring(3)}
               onPress={handleSubmitButton2}
-              disabled = {disableStuff}
+              /*<!--disabled = {disableStuff}->>*/
 
             /> 
           ))}
@@ -217,7 +217,7 @@ export const ChatView = ({ route }) => {
             message.content.includes("c:,") && <Button
               title= {message.content.substring(3)}
               onPress={handleSubmitButton3}
-              disabled = {disableStuff}
+              /*<!--disabled = {disableStuff}->>*/
 
             /> 
           ))}
@@ -227,7 +227,7 @@ export const ChatView = ({ route }) => {
             message.content.includes("d:,") && <Button
               title= {message.content.substring(3)}
               onPress={handleSubmitButton4}
-              disabled = {disableStuff}
+              /*<!--disabled = {disableStuff}->>*/
 
             />
           ))}
