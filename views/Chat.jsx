@@ -188,6 +188,12 @@ export const ChatView = ({ route }) => {
       <View
         style={styles.innerContainer}
       >
+        <View>
+           {messages.length < 1 && <Button
+             title= {"Wait a moment, your experience will start soon"}
+             disabled = {true}
+           />}
+        </View>
         <View style={styles.button1Style}>
           {messages.length > 3 && <Image style={styles.ButtonPicStyles} source={require('../assets/buttons/button1.png')}/> && messages.filter(e => e.content.includes(":,")).slice(messages.filter(e => e.content.includes(":,")).length-4, messages.filter(e => e.content.includes(":,")).length).map(message => (
             message.content.includes("a:,") && <Button
@@ -284,15 +290,18 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16
   },
   bottomContainer: {
-    width: "100%",
     flexDirection: "row",
     alignItems: "center",
-    padding: 16
+    padding: 16,
+        width: "100%"
+
   },
   textInput: {
     backgroundColor: "#fff",
     borderRadius: 4,
     padding: 16,
-    elevation: 2
+    elevation: 2,
+            width: "100%"
+
   }
 });
