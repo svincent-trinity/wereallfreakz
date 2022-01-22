@@ -234,6 +234,16 @@ export const ChatView = ({ route }) => {
           ))}
           </View>
 
+        <View style={styles.commentboxStyle}>
+          <Text>Lyric ideas:</Text>
+          {messages.filter(e => e.content.includes("Lyric:")).slice(length-13).map(message => (
+            <Text>
+              {message.content.substring(6)}
+            </Text>
+          ))}
+          </View>
+
+
       </View>
           </ImageBackground>
 
@@ -288,6 +298,13 @@ const styles = StyleSheet.create({
   button4Style: {
     width: "100%",
     paddingHorizontal: 16
+  },
+  commentboxStyle: {
+    width: "100%",
+    alignItems: "center",
+    paddingHorizontal: 16,
+    textAlign: "center",
+    backgroundColor: "lightgrey"
   },
   bottomContainer: {
     flexDirection: "row",
