@@ -9,5 +9,9 @@ THEN these commands:
 expo build:web
 cd web-build
 vercel
+(follow the prompts, vercel project is wereallfreakz)
+vercel --prod
+
+test at https://weallfreakz.com
 
 this is from expo's documentation: https://docs.expo.dev/distribution/publishing-websites/
