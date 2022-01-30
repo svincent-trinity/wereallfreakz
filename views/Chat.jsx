@@ -236,7 +236,7 @@ export const ChatView = ({ route }) => {
 
         <View style={styles.commentboxStyle}>
           <Text>Lyric ideas:</Text>
-          {messages.filter(e => e.content.includes("Lyric:")).slice(length-13).map(message => (
+          {messages.filter(e => e.content.includes("Lyric:") && e.content != "Lyric:").slice(length-13).map(message => (
             <Text>
               {message.content.substring(6)}
             </Text>
